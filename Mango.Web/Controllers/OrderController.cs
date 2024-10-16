@@ -4,6 +4,7 @@ using Mango.Web.Utility;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Authorization;
 namespace Mango.Web.Controllers
 {
     public class OrderController : Controller
@@ -14,13 +15,15 @@ namespace Mango.Web.Controllers
 			_orderService = orderService;
 		}
 
-		public IActionResult OrderIndex()
+        [Authorize]
+        public IActionResult OrderIndex()
         {
             return View();
         }
 
-		public async Task<IActionResult> OrderDetail(int orderId)
-		{
+        [Authorize]
+        public async Task<IActionResult> OrderDetail(int orderId)
+        {
 			OrderHeaderDto orderHeaderDto = new OrderHeaderDto();
 			string userId = User.Claims.Where(u => u.Type == JwtRegisteredClaimNames.Sub)?.FirstOrDefault()?.Value;
 			var response = await _orderService.GetOrder(orderId);
