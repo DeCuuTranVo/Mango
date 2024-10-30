@@ -57,8 +57,57 @@ This app is a web app that serves the purpose of online purchasing goods.
     │   │   ├── StripeRequestDto.cs
     │   │   └── UserDto.cs
     │   ├── <b>Utility </b>       
+    │   │   ├── AllowedExtensionsAttribute.cs
+    │   │   ├── MaxFileSizeAttribute.cs
+    │   │   └── SD.cs
+    │   ├── <b>Services </b>  
+    │   │   ├── <b>IService </b>       
+    │   │   │   ├── IAuthService.cs
+    │   │   │   ├── IBaseService.cs
+    │   │   │   ├── ICartService.cs
+    │   │   │   ├── ICouponService.cs
+    │   │   │   ├── IOrderService.cs
+    │   │   │   ├── IProductService.cs
+    │   │   │   └── ITokenProvider.cs
+    │   │   └── <b>Service </b>         
+    │   │       ├── AuthService.cs
+    │   │       ├── BaseService.cs
+    │   │       ├── CartService.cs
+    │   │       ├── CouponService.cs
+    │   │       ├── OrderService.cs
+    │   │       ├── ProductService.cs
+    │   │       └── TokenProvider.cs
+    │   ├── <b>Views </b>    
+    │   │   ├── <b>Auth </b>   
+    │   │   │   ├── Login.cshtml
+    │   │   │   └── Register.cshtml 
+    │   │   ├── <b>Cart </b>    
+    │   │   │   ├── CartIndex.cshtml
+    │   │   │   ├── Checkout.cshtml
+    │   │   │   └── Confirmation.cshtml
+    │   │   ├── <b>Coupon </b>    
+    │   │   │   ├── CouponCreate.cshtml
+    │   │   │   ├── CouponDelete.cshtml
+    │   │   │   └── CouponIndex.cshtml
+    │   │   ├── <b>Home </b>   
+    │   │   │   ├── Index.cshtml
+    │   │   │   ├── Privacy.cshtml
+    │   │   │   └── ProductDetails.cshtml
+    │   │   ├── <b>Order </b>    
+    │   │   │   ├── OrderDetail.cshtml
+    │   │   │   └── OrderIndex.cshtml
+    │   │   ├── <b>Product </b>    
+    │   │   │   ├── ProductCreate.cshtml
+    │   │   │   ├── ProductDelete.cshtml
+    │   │   │   ├── ProductEdit.cshtml
+    │   │   │   └── ProductIndex.cshtml
+    │   │   └── <b>Shared </b>    
+    │   │       ├── Error.cshtml
+    │   │       └── _Layout.cshtml
+    │   ├── Program.cs
+    │   └── appsettings.json
 
-
+    <b>BackEnd </b>
   
 
   
