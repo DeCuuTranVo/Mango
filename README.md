@@ -105,13 +105,120 @@ This app is a web app that serves the purpose of online purchasing goods.
 │       │   └── <b>Shared </b>    
 │       │       ├── Error.cshtml
 │       │       └── _Layout.cshtml
-│       ├── Program.cs
-│       └── appsettings.json
+│       ├── appsettings.json
+│       ├── appsettings.Production.json
+│       └── Program.cs
 ├── <b>Gateway </b>
 │   └── <b>Mango.GatewaySolution </b>
 │       ├── <b>Extensions </b>    
 │       │   └── WebApplicationBuilderExtensions.cs
-│       │
-│       │
-├── <b>BackEnd </b>
-├── <b>BackEnd </b>
+│       ├── appsettings.json
+│       ├── ocelot.json
+│       ├── ocelot.Production.json
+│       └── Program.cs
+├── <b>Integration </b>
+│   └── <b>Mango.MessageBus </b>
+│       ├── IMessageBus.cs
+│       └── MessageBus.cs
+├── <b>Services </b>
+│   ├── <b>Mango.Services.AuthAPI </b>
+│   │   ├── <b>Controllers </b>     
+│   |   │   └── AuthAPIController.cs
+│   |   ├── <b>Data </b>     
+│   |   │   └── AppDbContext.cs
+│   |   ├── <b>Models </b>       
+│   |   │   ├── <b>Dto </b>   
+│   |   │   │   ├── LoginRequestDto.cs
+│   |   │   │   ├── LoginResponseDto.cs
+│   |   │   │   ├── RegisterationRequestDto.cs
+│   |   │   │   ├── ResponseDto.cs  
+│   |   │   │   └── UserDto.cs
+│   |   │   ├── ApplicationUser.cs
+│   |   │   └── JwtOptions.cs
+│   |   ├── <b>Service </b>     
+│   |   │   ├── <b>IService </b>   
+│   |   │   │   ├── IAuthService.cs
+│   |   │   │   └── IJwtTokenGenerator.cs
+│   |   │   ├── AuthService.cs
+│   |   │   └── JwtTokenGenerator.cs
+│   |   ├── appsettings.json
+│   |   ├── appsettings.Production.json
+│   |   └── Program.cs
+│   ├── <b>Mango.Services.CouponAPI </b>
+│   │   ├── <b>Controllers </b>     
+│   |   │   └── CouponAPIController.cs
+│   |   ├── <b>Data </b>     
+│   |   │   └── AppDbContext.cs
+│   |   ├── <b>Extensions </b>    
+│   |   │   └── WebApplicationBuilderExtensions.cs
+│   |   ├── <b>Models </b>       
+│   |   │   ├── <b>Dto </b>   
+│   |   │   │   ├── CouponDto.cs
+│   |   │   │   └── ResponseDto.cs  
+│   |   │   └── Coupon.cs
+│   |   ├── <b>Service </b>     
+│   |   │   ├── <b>IService </b>   
+│   |   │   │   ├── IAuthService.cs
+│   |   │   │   └── IJwtTokenGenerator.cs
+│   |   │   ├── AuthService.cs
+│   |   │   └── JwtTokenGenerator.cs
+│   |   ├── MappingConfig.cs
+│   |   ├── appsettings.json
+│   |   ├── appsettings.Production.json
+│   |   └── Program.cs
+│   ├── <b>Mango.Services.EmailAPI </b>
+│   |   ├── <b>Data </b>     
+│   |   │   └── AppDbContext.cs
+│   |   ├── <b>Extensions </b>    
+│   |   │   └── WebApplicationBuilderExtensions.cs
+│   |   ├── <b>Models </b>       
+│   |   │   ├── <b>Dto </b>   
+│   |   │   │   ├── CartDetailsDto.cs
+│   |   │   │   ├── CartDto.cs
+│   |   │   │   ├── CartHeaderDto.cs
+│   |   │   │   └── ProductDto.cs
+│   |   │   └── EmailLogger.cs
+│   |   ├── <b>Message </b>    
+│   |   │   └── RewardsMessage.cs
+│   |   ├── <b>Messaging </b>   
+│   |   │   ├── AzureServiceBusConsumer.cs 
+│   |   │   └── IAzureServiceBusConsumer.cs
+│   |   ├── <b>Service </b>     
+│   |   │   ├── EmailService.cs
+│   |   │   └── IEmailService.cs
+│   |   ├── appsettings.json
+│   |   ├── appsettings.Production.json
+│   |   └── Program.cs
+│   ├── <b>Mango.Services.OrderAPI </b>
+│   │   ├── <b>Controllers </b>     
+│   |   │   └── OrderAPIController.cs
+│   |   ├── <b>Data </b>     
+│   |   │   └── AppDbContext.cs
+│   |   ├── <b>Extensions </b>    
+│   |   │   └── WebApplicationBuilderExtensions.cs
+│   |   ├── <b>Models </b>       
+│   |   │   ├── <b>Dto </b>   
+│   |   │   │   ├── CartDetailsDto.cs
+│   |   │   │   ├── CartDto.cs
+│   |   │   │   ├── CartHeaderDto.cs
+│   |   │   │   ├── OrderDetailsDto.cs
+│   |   │   │   ├── OrderHeaderDto.cs
+│   |   │   │   ├── ProductDto.cs
+│   |   │   │   ├── ResponseDto.cs
+│   |   │   │   ├── RewardsDto.cs
+│   |   │   │   └── StripeRequestDto.cs
+│   |   │   ├── OrderDetails.cs
+│   |   │   └── OrderHeader.cs
+│   |   ├── <b>Service </b>     
+│   |   │   ├── <b>IService </b>   
+│   |   │   │   └── IProductService.cs
+│   |   │   └── ProductService.cs
+│   |   ├── <b>Utility </b>       
+│   |   │   ├── BackendApiAuthenticationHttpClientHandler.cs
+│   |   │   └── SD.cs
+│   |   ├── MappingConfig.cs
+│   |   ├── appsettings.json
+│   |   ├── appsettings.Production.json
+│   |   └── Program.cs
+    
+
