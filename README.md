@@ -24,6 +24,7 @@ This app is a web app that serves the purpose of online purchasing goods.
     └── Web Development: 
         ├── Front-end: HTML, CSS, JavaScript, Bootstrap, ASP.NET Core MVC 
         ├── Back-end: C#, ASP.NET Web API, Entity Framework Core, ASP.NET Identity Core
+        ├── Cloud: Azure Service Bus
         └── Third-party libraries: Stripe
 ```
 
