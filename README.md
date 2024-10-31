@@ -220,5 +220,67 @@ This app is a web app that serves the purpose of online purchasing goods.
 │   |   ├── appsettings.json
 │   |   ├── appsettings.Production.json
 │   |   └── Program.cs
-    
-
+│   ├── <b>Mango.Services.ProductAPI </b>
+│   │   ├── <b>Controllers </b>     
+│   |   │   └── ProductAPIController.cs
+│   |   ├── <b>Data </b>     
+│   |   │   └── AppDbContext.cs
+│   |   ├── <b>Extensions </b>    
+│   |   │   └── WebApplicationBuilderExtensions.cs
+│   |   ├── <b>Models </b>       
+│   |   │   ├── <b>Dto </b>   
+│   |   │   │   ├── ProductDto.cs
+│   |   │   │   └── ResponseDto.cs
+│   |   │   └── Product.cs
+│   |   ├── MappingConfig.cs
+│   |   ├── appsettings.json
+│   |   ├── appsettings.Production.json
+│   |   └── Program.cs
+│   ├── <b>Mango.Services.RewardAPI </b>
+│   |   ├── <b>Data </b>     
+│   |   │   └── AppDbContext.cs
+│   |   ├── <b>Extensions </b>    
+│   |   │   └── WebApplicationBuilderExtensions.cs
+│   |   ├── <b>Models </b>       
+│   |   │   └── Rewards.cs
+│   |   ├── <b>Message </b>    
+│   |   │   └── RewardsMessage.cs
+│   |   ├── <b>Messaging </b>   
+│   |   │   ├── AzureServiceBusConsumer.cs 
+│   |   │   └── IAzureServiceBusConsumer.cs
+│   |   ├── <b>Service </b>     
+│   |   │   ├── IRewardService.cs
+│   |   │   └── RewardService.cs
+│   |   ├── appsettings.json
+│   |   ├── appsettings.Production.json
+│   |   └── Program.cs
+│   └── <b>Mango.Services.ShoppingCartAPI </b>
+│       ├── <b>Controllers </b>     
+│       │   └── CartAPIController.cs
+│       ├── <b>Data </b>     
+│       │   └── AppDbContext.cs
+│       ├── <b>Extensions </b>    
+│       │   └── WebApplicationBuilderExtensions.cs
+│       ├── <b>Models </b>       
+│       │   ├── <b>Dto </b>   
+│       │   │   ├── CartDetailsDto.cs
+│       │   │   ├── CartDto.cs
+│       │   │   ├── CartHeaderDto.cs
+│       │   │   ├── CouponDto.cs
+│       │   │   ├── ProductDto.cs
+│       │   │   └── ResponseDto.cs
+│       │   ├── CartDetails.cs
+│       │   └── CartHeader.cs
+│       ├── <b>Service </b>     
+│       │   ├── <b>IService </b>   
+│       │   │   ├── ICouponService.cs
+│       │   │   └── IProductService.cs
+│       │   ├── CouponService.cs
+│       │   └── ProductService.cs
+│       ├── <b>Utility </b>       
+│       │   └── BackendApiAuthenticationHttpClientHandler.cs
+│       ├── MappingConfig.cs
+│       ├── appsettings.json
+│       ├── appsettings.Production.json
+│       └── Program.cs
+└── README.md
