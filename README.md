@@ -32,79 +32,86 @@ This app is a web app that serves the purpose of online purchasing goods.
 <h3> 2.3. Project Structure </h3>
 
 <pre>
-    <b>FrontEnd </b>
-    ├── <b>Mango.Web </b>
-    │   ├── <b>Controllers </b>     
-    │   │   ├── AuthControllers.cs
-    │   │   ├── CartControllers.cs
-    │   │   ├── CouponControllers.cs
-    │   │   ├── HomeControllers.cs
-    │   │   ├── OrderControllers.cs
-    │   │   └── ProductControllers.cs
-    │   ├── <b>Models </b>       
-    │   │   ├── CartDetailsDto.cs
-    │   │   ├── CartDto.cs
-    │   │   ├── CartHeaderDto.cs
-    │   │   ├── CouponDto.cs
-    │   │   ├── ErrorViewModel.cs
-    │   │   ├── LoginRequestDto.cs
-    │   │   ├── LoginResponseDto.cs
-    │   │   ├── OrderDetailsDto.cs
-    │   │   ├── OrderHeaderDto.cs
-    │   │   ├── ProductDto.cs
-    │   │   ├── RequestDto.cs
-    │   │   ├── ResponseDto.cs
-    │   │   ├── StripeRequestDto.cs
-    │   │   └── UserDto.cs
-    │   ├── <b>Utility </b>       
-    │   │   ├── AllowedExtensionsAttribute.cs
-    │   │   ├── MaxFileSizeAttribute.cs
-    │   │   └── SD.cs
-    │   ├── <b>Services </b>  
-    │   │   ├── <b>IService </b>       
-    │   │   │   ├── IAuthService.cs
-    │   │   │   ├── IBaseService.cs
-    │   │   │   ├── ICartService.cs
-    │   │   │   ├── ICouponService.cs
-    │   │   │   ├── IOrderService.cs
-    │   │   │   ├── IProductService.cs
-    │   │   │   └── ITokenProvider.cs
-    │   │   └── <b>Service </b>         
-    │   │       ├── AuthService.cs
-    │   │       ├── BaseService.cs
-    │   │       ├── CartService.cs
-    │   │       ├── CouponService.cs
-    │   │       ├── OrderService.cs
-    │   │       ├── ProductService.cs
-    │   │       └── TokenProvider.cs
-    │   ├── <b>Views </b>    
-    │   │   ├── <b>Auth </b>   
-    │   │   │   ├── Login.cshtml
-    │   │   │   └── Register.cshtml 
-    │   │   ├── <b>Cart </b>    
-    │   │   │   ├── CartIndex.cshtml
-    │   │   │   ├── Checkout.cshtml
-    │   │   │   └── Confirmation.cshtml
-    │   │   ├── <b>Coupon </b>    
-    │   │   │   ├── CouponCreate.cshtml
-    │   │   │   ├── CouponDelete.cshtml
-    │   │   │   └── CouponIndex.cshtml
-    │   │   ├── <b>Home </b>   
-    │   │   │   ├── Index.cshtml
-    │   │   │   ├── Privacy.cshtml
-    │   │   │   └── ProductDetails.cshtml
-    │   │   ├── <b>Order </b>    
-    │   │   │   ├── OrderDetail.cshtml
-    │   │   │   └── OrderIndex.cshtml
-    │   │   ├── <b>Product </b>    
-    │   │   │   ├── ProductCreate.cshtml
-    │   │   │   ├── ProductDelete.cshtml
-    │   │   │   ├── ProductEdit.cshtml
-    │   │   │   └── ProductIndex.cshtml
-    │   │   └── <b>Shared </b>    
-    │   │       ├── Error.cshtml
-    │   │       └── _Layout.cshtml
-    │   ├── Program.cs
-    │   └── appsettings.json
-
-    <b>BackEnd </b>
+<b>Mango </b>
+├── <b>FrontEnd </b>
+│   └── <b>Mango.Web </b>
+│       ├── <b>Controllers </b>     
+│       │   ├── AuthControllers.cs
+│       │   ├── CartControllers.cs
+│       │   ├── CouponControllers.cs
+│       │   ├── HomeControllers.cs
+│       │   ├── OrderControllers.cs
+│       │   └── ProductControllers.cs
+│       ├── <b>Models </b>       
+│       │   ├── CartDetailsDto.cs
+│       │   ├── CartDto.cs
+│       │   ├── CartHeaderDto.cs
+│       │   ├── CouponDto.cs
+│       │   ├── ErrorViewModel.cs
+│       │   ├── LoginRequestDto.cs
+│       │   ├── LoginResponseDto.cs
+│       │   ├── OrderDetailsDto.cs
+│       │   ├── OrderHeaderDto.cs
+│       │   ├── ProductDto.cs
+│       │   ├── RequestDto.cs
+│       │   ├── ResponseDto.cs
+│       │   ├── StripeRequestDto.cs
+│       │   └── UserDto.cs
+│       ├── <b>Utility </b>       
+│       │   ├── AllowedExtensionsAttribute.cs
+│       │   ├── MaxFileSizeAttribute.cs
+│       │   └── SD.cs
+│       ├── <b>Services </b>  
+│       │   ├── <b>IService </b>       
+│       │   │   ├── IAuthService.cs
+│       │   │   ├── IBaseService.cs
+│       │   │   ├── ICartService.cs
+│       │   │   ├── ICouponService.cs
+│       │   │   ├── IOrderService.cs
+│       │   │   ├── IProductService.cs
+│       │   │   └── ITokenProvider.cs
+│       │   └── <b>Service </b>         
+│       │       ├── AuthService.cs
+│       │       ├── BaseService.cs
+│       │       ├── CartService.cs
+│       │       ├── CouponService.cs
+│       │       ├── OrderService.cs
+│       │       ├── ProductService.cs
+│       │       └── TokenProvider.cs
+│       ├── <b>Views </b>    
+│       │   ├── <b>Auth </b>   
+│       │   │   ├── Login.cshtml
+│       │   │   └── Register.cshtml 
+│       │   ├── <b>Cart </b>    
+│       │   │   ├── CartIndex.cshtml
+│       │   │   ├── Checkout.cshtml
+│       │   │   └── Confirmation.cshtml
+│       │   ├── <b>Coupon </b>    
+│       │   │   ├── CouponCreate.cshtml
+│       │   │   ├── CouponDelete.cshtml
+│       │   │   └── CouponIndex.cshtml
+│       │   ├── <b>Home </b>   
+│       │   │   ├── Index.cshtml
+│       │   │   ├── Privacy.cshtml
+│       │   │   └── ProductDetails.cshtml
+│       │   ├── <b>Order </b>    
+│       │   │   ├── OrderDetail.cshtml
+│       │   │   └── OrderIndex.cshtml
+│       │   ├── <b>Product </b>    
+│       │   │   ├── ProductCreate.cshtml
+│       │   │   ├── ProductDelete.cshtml
+│       │   │   ├── ProductEdit.cshtml
+│       │   │   └── ProductIndex.cshtml
+│       │   └── <b>Shared </b>    
+│       │       ├── Error.cshtml
+│       │       └── _Layout.cshtml
+│       ├── Program.cs
+│       └── appsettings.json
+├── <b>Gateway </b>
+│   └── <b>Mango.GatewaySolution </b>
+│       ├── <b>Extensions </b>    
+│       │   └── WebApplicationBuilderExtensions.cs
+│       │
+│       │
+├── <b>BackEnd </b>
+├── <b>BackEnd </b>
